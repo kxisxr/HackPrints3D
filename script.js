@@ -25,7 +25,7 @@ function calcularCosto() {
     // D. Multiplicador de Ganancia y Riesgo (Margen de Beneficio)
     const multiplicadorGanancia = 1.6;
 
-    // --- CÁLCULOS ---
+    // --- CÁLCULOS --- testcomment
     
     // 1. Costo del Material (MXN)
     const pesoKg = pesoGramos / 1000;
