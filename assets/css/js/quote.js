@@ -1,3 +1,5 @@
+// assets/js/quote.js
+
 function calcularCosto() {
     // 1. Obtener valores del formulario
     const pesoGramos = parseFloat(document.getElementById('peso').value);
@@ -11,13 +13,13 @@ function calcularCosto() {
         return;
     }
 
-    // --- Parámetros de Costo Fijos (AJUSTADOS) ---
+    // --- Parámetros de Costo Fijos (AJUSTADOS para Centauri Carbon y NL) ---
     
     // A. Costo de la Electricidad (Nuevo León, CFE Tarifa de Referencia)
-    const costoElectricidadPorKWH = 4.50; // MXN por kWh (Ajuste para NL)
+    const costoElectricidadPorKWH = 4.50; // MXN por kWh
     
     // B. Consumo Promedio de la Impresora 3D (Centauri Carbon - Estimado en impresión)
-    const consumoImpresoraKW = 0.20; // 200 Watts / 1000 = 0.20 kW (Ajuste para Centauri Carbon)
+    const consumoImpresoraKW = 0.20; // 200 Watts / 1000 = 0.20 kW
 
     // C. Costo por Mantenimiento, Depreciación y Mano de Obra por hora
     const costoManoDeObraPorHora = 30.00; // MXN por hora
@@ -25,11 +27,11 @@ function calcularCosto() {
     // D. Multiplicador de Ganancia y Riesgo (Margen de Beneficio)
     const multiplicadorGanancia = 1.6;
 
-    // --- CÁLCULOS --- testcomment
+    // --- CÁLCULOS ---
     
     // 1. Costo del Material (MXN)
     const pesoKg = pesoGramos / 1000;
-    const costoMaterial = pesoKg * costoPorKg; // Usa los nuevos precios del HTML
+    const costoMaterial = pesoKg * costoPorKg;
 
     // 2. Costo de Energía (MXN)
     const costoEnergia = tiempoHoras * consumoImpresoraKW * costoElectricidadPorKWH;
@@ -53,7 +55,7 @@ function calcularCosto() {
     const costoRedondeado = costoFinal.toFixed(2); // Redondear a 2 decimales
     document.getElementById('costoTotal').textContent = `$${costoRedondeado} MXN`;
 
-    // *Desglose en Consola*
+    // *Desglose en Consola* (útil para depuración)
     console.log(`--- Desglose de Costos (MXN) ---`);
     console.log(`Costo Material: $${costoMaterial.toFixed(2)}`);
     console.log(`Costo Energía (NL/Centauri Carbon): $${costoEnergia.toFixed(2)}`);

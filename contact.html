@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - HackPrints</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="HackPrints Logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="projects.html">Proyectos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="quote.html" class="btn">Cotizador 3D</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container fade-in">
+        <h1>Contáctanos</h1>
+        <p>¿Tienes un proyecto en mente o una pregunta? Estamos aquí para ayudarte.</p>
+
+        <div style="max-width: 600px; margin: 40px auto; background-color: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left;">
+            <form action="#" method="POST"> <div class="input-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+            <p style="text-align: center; margin-top: 30px;">También puedes encontrarnos en:</p>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <a href="#" style="font-size: 2em; color: var(--primary-blue);"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" style="font-size: 2em; color: var(--primary-blue);"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="font-size: 2em; color: var(--primary-blue);"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 HackPrints. Todos los derechos reservados.</p>
+            <p>Diseñado con <a href="#">pasión 3D</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

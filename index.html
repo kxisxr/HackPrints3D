@@ -3,48 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizador 3D Centauri Carbon - MXN</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HackPrints - Impresión 3D Innovadora</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <div class="cotizador-container">
-        <h1>Calculadora de Costo de Impresión 3D</h1>
-        <p>Modelo: Centauri Carbon | Región: MX</p>
-        
-        <div class="input-group">
-            <label for="peso">Peso del Material (gramos - g):</label>
-            <input type="number" id="peso" value="50" min="1">
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="assets/img/logo.png" alt="HackPrints Logo"> 
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="projects.html">Proyectos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="quote.html" class="btn">Cotizador 3D</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="input-group">
-            <label for="tiempo">Tiempo de Impresión (horas - h):</label>
-            <input type="number" id="tiempo" value="3" min="0.1" step="0.1">
+    <section class="hero fade-in">
+        <div class="container">
+            <h1>Convierte tus Ideas en Realidad 3D</h1>
+            <p>En HackPrints, transformamos tus diseños digitales en objetos físicos de alta precisión. Innovación y calidad a tu alcance.</p>
+            <a href="quote.html" class="btn">Calcula tu Impresión</a>
         </div>
+    </section>
 
-        <div class="input-group">
-            <label for="material">Material (Costo por Kg en MXN):</label>
-            <select id="material">
-                <option value="256">PLA Estándar ($256/kg)</option>
-                <option value="225">PETG Duradero ($225/kg)</option>
-                <option value="550">ASA/ABS Industrial ($550/kg)</option>
-            </select>
+    <section class="container fade-in">
+        <h2>¿Qué Hacemos en HackPrints?</h2>
+        <p>Somos tu socio tecnológico para la fabricación aditiva. Desde prototipos funcionales hasta piezas personalizadas, nuestro equipo y tecnología de vanguardia están listos para tu próximo proyecto.</p>
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px;">
+            <div style="width: 30%; text-align: center;">
+                <i class="fas fa-lightbulb" style="font-size: 3em; color: var(--primary-green); margin-bottom: 15px;"></i>
+                <h3>Innovación</h3>
+                <p>Exploramos las últimas tecnologías para ofrecerte soluciones creativas y eficientes.</p>
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <i class="fas fa-ruler-combined" style="font-size: 3em; color: var(--primary-orange); margin-bottom: 15px;"></i>
+                <h3>Precisión</h3>
+                <p>Calidad garantizada en cada impresión, con detalles finos y acabados profesionales.</p>
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <i class="fas fa-cogs" style="font-size: 3em; color: var(--primary-blue); margin-bottom: 15px;"></i>
+                <h3>Personalización</h3>
+                <p>Tus ideas, tus reglas. Diseñamos y producimos justo lo que necesitas.</p>
+            </div>
         </div>
-        
-        <div class="input-group checkbox-group">
-            <input type="checkbox" id="incluirManoObra" checked>
-            <label for="incluirManoObra">Incluir Mano de Obra y Post-Procesado (30 MXN/h)</label>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 HackPrints. Todos los derechos reservados.</p>
+            <p>Diseñado con <a href="#">pasión 3D</a></p>
         </div>
+    </footer>
 
-        <button onclick="calcularCosto()">Calcular Presupuesto</button>
-
-        <div class="resultado">
-            <h2>Costo Total Estimado:</h2>
-            <p id="costoTotal">$0.00 MXN</p>
-            <small>*Estimación basada en Centauri Carbon (0.20 kW) y tarifa eléctrica de NL ($4.50/kWh).</small>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
