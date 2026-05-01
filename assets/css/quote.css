@@ -1,0 +1,110 @@
+/* assets/css/quote.css */
+body {
+    /* Aquí se sobrescriben algunos estilos globales si es necesario para esta página específica */
+    /* Por ejemplo, si el cotizador necesita un fondo ligeramente diferente */
+    /* background-color: #e9ecef; */
+}
+
+.cotizador-container {
+    font-family: 'Open Sans', sans-serif; /* Usamos la fuente global */
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 450px;
+    margin: 50px auto; /* Centrar en la página */
+    box-sizing: border-box; /* Para padding */
+}
+
+.cotizador-container h1 {
+    color: var(--primary-blue);
+    margin-top: 0;
+    font-size: 1.8em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.cotizador-container p {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button {
+    background-color: var(--primary-blue); /* Usamos el azul principal del logo */
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: var(--primary-orange); /* Naranja del logo al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+.resultado {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+#costoTotal {
+    font-size: 2.5em;
+    color: var(--primary-green); /* Verde del logo para el costo final */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+small {
+    color: var(--text-light);
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilo para el Checkbox de Mano de Obra */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    height: 18px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    color: var(--text-dark);
+}
