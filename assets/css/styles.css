@@ -651,7 +651,7 @@ select option {
 }
 
 .whatsapp-widget::before {
-    content: "Clickeame!";
+    content: "Contáctanos!";
     position: absolute;
     right: 0.6rem;
     top: -0.95rem;
