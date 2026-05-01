@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | HackPrints</title>
+    <meta name="description" content="Galeria de proyectos de impresion 3D con filtros por categoria y fichas tecnicas compactas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a href="index.html" class="brand" aria-label="HackPrints inicio">
+                    <img src="assets/img/logo.png" alt="HackPrints logo">
+                    <span>HackPrints3D</span>
+                </a>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="site-nav" aria-label="Principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="services.html">Servicios</a>
+                    <a href="projects.html" class="is-active">Proyectos</a>
+                    <a href="contact.html">Contacto</a>
+                    <a href="quote.html" class="btn btn-primary">Cotiza llaveros</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="page-main">
+            <section class="page-hero">
+                <div class="container">
+                    <span class="eyebrow reveal">Modo galeria</span>
+                    <h1 class="reveal">Portafolio filtrable para mostrar variedad sin saturar al visitante.</h1>
+                    <p class="reveal">En vez de un carrusel fragil, ahora tienes tarjetas visuales con datos de material, tiempo y categoria, listas para crecer con tus proyectos reales.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="filter-bar reveal">
+                        <button class="filter-chip is-active" type="button" data-filter="all">Todo</button>
+                        <button class="filter-chip" type="button" data-filter="funcional">Funcional</button>
+                        <button class="filter-chip" type="button" data-filter="branding">Branding</button>
+                        <button class="filter-chip" type="button" data-filter="maker">Maker</button>
+                        <button class="filter-chip" type="button" data-filter="decoracion">Decoracion</button>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <article class="gallery-card reveal" data-category="funcional">
+                            <div class="gallery-visual visual-a"></div>
+                            <div class="gallery-body">
+                                <span class="project-tag">Funcional</span>
+                                <h2>Soporte modular para taller</h2>
+                                <p>Organizador apilable con tolerancias pensadas para herramientas y repuestos.</p>
+                                <div class="project-meta"><span>PLA+</span><span>6 h</span><span>220 g</span></div>
+                                <button class="text-link project-modal-trigger" type="button" data-project="Soporte modular para taller" data-details="Organizador modular para banco de trabajo con varias alturas, sistema de clip y refuerzo interno para carga ligera.">Ver detalle</button>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card reveal" data-category="branding">
+                            <div class="gallery-visual visual-b"></div>
+                            <div class="gallery-body">
+                                <span class="project-tag">Branding</span>
+                                <h2>Letras 3D para mostrador</h2>
+                                <p>Set volumetrico para punto de venta con frente premium y base estable.</p>
+                                <div class="project-meta"><span>PLA seda</span><span>9 h</span><span>310 g</span></div>
+                                <button class="text-link project-modal-trigger" type="button" data-project="Letras 3D para mostrador" data-details="Proyecto orientado a retail, pensado para facilitar branding fisico con acabados limpios y posibilidad de color corporativo.">Ver detalle</button>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card reveal" data-category="maker">
+                            <div class="gallery-visual visual-c"></div>
+                            <div class="gallery-body">
+                                <span class="project-tag">Maker</span>
+                                <h2>Dock de escritorio para setup</h2>
+                                <p>Base compacta para cargar, ordenar y exhibir accesorios de uso diario.</p>
+                                <div class="project-meta"><span>PETG</span><span>7.5 h</span><span>260 g</span></div>
+                                <button class="text-link project-modal-trigger" type="button" data-project="Dock de escritorio para setup" data-details="Pieza orientada a productividad y decoracion. Incluye canales para cableado y composicion visual mas limpia para escritorio.">Ver detalle</button>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card reveal" data-category="decoracion">
+                            <div class="gallery-visual visual-d"></div>
+                            <div class="gallery-body">
+                                <span class="project-tag">Decoracion</span>
+                                <h2>Luminaria geometrica</h2>
+                                <p>Pieza decorativa con patron abierto para luz ambiental y presencia visual.</p>
+                                <div class="project-meta"><span>PLA</span><span>11 h</span><span>180 g</span></div>
+                                <button class="text-link project-modal-trigger" type="button" data-project="Luminaria geometrica" data-details="Diseno pensado para interiores, con juego de sombras y textura superficial que aprovecha la impresion por capas como recurso estetico.">Ver detalle</button>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card reveal" data-category="funcional">
+                            <div class="gallery-visual visual-e"></div>
+                            <div class="gallery-body">
+                                <span class="project-tag">Funcional</span>
+                                <h2>Carcasa para electronica</h2>
+                                <p>Enclosure con ventilacion, puntos de atornillado y acceso a puertos.</p>
+                                <div class="project-meta"><span>ABS</span><span>8 h</span><span>140 g</span></div>
+                                <button class="text-link project-modal-trigger" type="button" data-project="Carcasa para electronica" data-details="Desarrollada para pruebas de producto con acceso a conectores, tolerancias de encastre y versionado rapido de tapas y fijaciones.">Ver detalle</button>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card reveal" data-category="branding">
+                            <div class="gallery-visual visual-f"></div>
+                            <div class="gallery-body">
+                                <span class="project-tag">Branding</span>
+                                <h2>Trofeo personalizado</h2>
+                                <p>Objeto conmemorativo con base y volumen central pensado para eventos o comunidad.</p>
+                                <div class="project-meta"><span>PLA + pintura</span><span>10 h</span><span>290 g</span></div>
+                                <button class="text-link project-modal-trigger" type="button" data-project="Trofeo personalizado" data-details="Pieza orientada a ceremonias, meetups o torneos. Se puede personalizar con nombre, logotipo y tema visual del evento.">Ver detalle</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="project-modal" id="project-modal" aria-hidden="true">
+            <div class="project-modal-card">
+                <button class="modal-close" type="button" aria-label="Cerrar detalle">&times;</button>
+                <p class="eyebrow">Ficha del proyecto</p>
+                <h2 id="modal-title">Proyecto</h2>
+                <p id="modal-details">Detalles del proyecto.</p>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                    <a href="index.html" class="brand footer-brand">
+                        <img src="assets/img/logo.png" alt="HackPrints logo">
+                        <span>HackPrints3D</span>
+                    </a>
+                    <p>Impresion 3D con enfoque visual, tecnico y comercial.</p>
+                </div>
+                <div>
+                    <h3>Secciones</h3>
+                    <a href="services.html">Servicios</a>
+                    <a href="projects.html">Proyectos</a>
+                    <a href="quote.html">Cotiza llaveros</a>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <a href="contact.html">Formulario</a>
+                    <a href="mailto:hola@hackprints.mx">hola@hackprints.mx</a>
+                    <a href="tel:+528112345678">+52 81 1234 5678</a>
+                </div>
+            </div>
+        </footer>
+
+        <a
+            href="https://wa.me/528112345678?text=Hola%20HackPrints3D,%20quiero%20cotizar%20un%20proyecto%20similar%20a%20los%20de%20su%20galeria."
+            class="whatsapp-widget"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Escribenos por WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

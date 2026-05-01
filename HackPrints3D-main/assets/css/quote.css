@@ -1,0 +1,42 @@
+.calculators-grid {
+    align-items: stretch;
+}
+
+.calculator-card {
+    min-height: 100%;
+}
+
+.calculator-card .card-heading {
+    align-items: end;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-card .eyebrow {
+    margin-bottom: 0.35rem;
+}
+
+.breakdown-list {
+    margin-top: 1rem;
+}
+
+#filament-spool-status,
+#quick-summary {
+    margin-top: 0.75rem;
+}
+
+.market-note,
+.market-list {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.market-list div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding: 0.95rem 1rem;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.025);
+}
