@@ -3,73 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Servicios - HackPrints</title>
+    <title>Servicios | HackPrints</title>
+    <meta name="description" content="Servicios de impresion 3D, modelado, prototipado y produccion por lote con materiales y acabados para distintos usos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                <img src="assets/img/logo.png" alt="HackPrints Logo">
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="services.html">Servicios</a></li>
-                    <li><a href="projects.html">Proyectos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="quote.html" class="btn">Cotizador 3D</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="container fade-in">
-        <h1>Nuestros Servicios de Impresión 3D</h1>
-        <p>En HackPrints, ofrecemos una gama completa de soluciones de fabricación aditiva para tus necesidades.</p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
-            <div style="background-color: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left;" class="fade-in">
-                <i class="fas fa-cube" style="font-size: 2.5em; color: var(--primary-blue); margin-bottom: 15px;"></i>
-                <h3>Prototipado Rápido</h3>
-                <p>Convierte tus ideas en prototipos físicos en tiempo récord. Ideal para validación de diseño y pruebas funcionales.</p>
-                <ul>
-                    <li>Modelos conceptales</li>
-                    <li>Pruebas de ajuste</li>
-                    <li>Iteraciones de diseño</li>
-                </ul>
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a href="index.html" class="brand" aria-label="HackPrints inicio">
+                    <img src="assets/img/logo.png" alt="HackPrints logo">
+                    <span>HackPrints3D</span>
+                </a>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="site-nav" aria-label="Principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="services.html" class="is-active">Servicios</a>
+                    <a href="projects.html">Proyectos</a>
+                    <a href="contact.html">Contacto</a>
+                    <a href="quote.html" class="btn btn-primary">Cotiza llaveros</a>
+                </nav>
             </div>
-            <div style="background-color: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left;" class="fade-in">
-                <i class="fas fa-palette" style="font-size: 2.5em; color: var(--primary-green); margin-bottom: 15px;"></i>
-                <h3>Impresiones Personalizadas</h3>
-                <p>Desde figuras decorativas hasta herramientas especializadas, creamos objetos 3D únicos para ti o tu negocio.</p>
-                <ul>
-                    <li>Regalos únicos</li>
-                    <li>Piezas de repuesto</li>
-                    <li>Miniaturas y modelos</li>
-                </ul>
-            </div>
-            <div style="background-color: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left;" class="fade-in">
-                <i class="fas fa-tools" style="font-size: 2.5em; color: var(--primary-orange); margin-bottom: 15px;"></i>
-                <h3>Producción de Piezas Finales</h3>
-                <p>Fabricación de componentes duraderos y funcionales para industrias como la automotriz, robótica y manufactura.</p>
-                <ul>
-                    <li>Utillajes y herramientas</li>
-                    <li>Componentes técnicos</li>
-                    <li>Producción de bajo volumen</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 HackPrints. Todos los derechos reservados.</p>
-            <p>Diseñado con <a href="#">pasión 3D</a></p>
-        </div>
-    </footer>
+        <main class="page-main">
+            <section class="page-hero">
+                <div class="container">
+                    <span class="eyebrow reveal">Servicios tipicos de una marca 3D moderna</span>
+                    <h1 class="reveal">Soluciones para pasar de una idea a una pieza final sin friccion.</h1>
+                    <p class="reveal">Organizamos la oferta en categorias claras para que cualquier cliente entienda rapidamente que puede pedir y que nivel de acabado puede esperar.</p>
+                </div>
+            </section>
 
+            <section class="section">
+                <div class="container service-grid">
+                    <article class="service-card reveal">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h2>Prototipado rapido</h2>
+                        <p>Ideal para validar forma, volumen, ergonomia y ensamble antes de invertir en produccion.</p>
+                        <ul>
+                            <li>Maquetas funcionales</li>
+                            <li>Pruebas de ajuste</li>
+                            <li>Versiones iterativas en 24 a 72 horas</li>
+                        </ul>
+                    </article>
+                    <article class="service-card reveal">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h2>Piezas funcionales</h2>
+                        <p>Componentes para uso real con enfoque en resistencia, fijacion y durabilidad.</p>
+                        <ul>
+                            <li>Refacciones</li>
+                            <li>Soportes y adaptadores</li>
+                            <li>Fixtures y herramientas</li>
+                        </ul>
+                    </article>
+                    <article class="service-card reveal">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                        <h2>Modelado y optimizacion</h2>
+                        <p>Partimos de un boceto, una referencia o una necesidad y la convertimos en una pieza imprimible.</p>
+                        <ul>
+                            <li>Diseno CAD</li>
+                            <li>Preparacion para slicing</li>
+                            <li>Reduccion de soportes y tiempos</li>
+                        </ul>
+                    </article>
+                    <article class="service-card reveal">
+                        <i class="fa-solid fa-swatchbook"></i>
+                        <h2>Acabados y presentacion</h2>
+                        <p>Porque la experiencia final importa tanto como la precision dimensional.</p>
+                        <ul>
+                            <li>Lijado y sellado</li>
+                            <li>Pintura base o tematica</li>
+                            <li>Ensamble y kits de entrega</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section section-alt">
+                <div class="container split-layout">
+                    <div class="split-copy reveal">
+                        <span class="eyebrow">Materiales y casos de uso</span>
+                        <h2>Seleccion del material segun resistencia, apariencia y contexto.</h2>
+                        <p>Una buena pagina de impresion 3D suele resolver esta duda rapido. Aqui ya queda mas clara la diferencia entre opciones.</p>
+                    </div>
+                    <div class="materials-table reveal">
+                        <article><strong>PLA</strong><span>Presentaciones visuales, figuras, branding, prototipos conceptuales.</span></article>
+                        <article><strong>PETG</strong><span>Uso diario, piezas semitecnicas, resistencia al impacto y a la humedad.</span></article>
+                        <article><strong>TPU</strong><span>Piezas flexibles, protectores, topes, grips y accesorios absorbentes.</span></article>
+                        <article><strong>ABS / ASA</strong><span>Ambientes mas exigentes, mejor resistencia termica y exterior moderado.</span></article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section-heading reveal">
+                        <span class="eyebrow">Preguntas frecuentes</span>
+                        <h2>Respuestas rapidas que normalmente ayudan a cerrar ventas.</h2>
+                    </div>
+                    <div class="faq-list">
+                        <article class="faq-item reveal">
+                            <h3>Que archivos aceptan?</h3>
+                            <p>STL, OBJ, STEP, 3MF y tambien referencias visuales si necesitas modelado desde cero.</p>
+                        </article>
+                        <article class="faq-item reveal">
+                            <h3>Cuanto tarda una impresion?</h3>
+                            <p>Depende del tamano, altura de capa, soportes y acabado. Para prototipos simples puedes prometer entre 24 y 72 horas.</p>
+                        </article>
+                        <article class="faq-item reveal">
+                            <h3>Pueden ayudarme si no tengo modelo 3D?</h3>
+                            <p>Si. La pagina ahora ya comunica tambien servicio de diseno, optimizacion y preparacion para manufactura aditiva.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                    <a href="index.html" class="brand footer-brand">
+                        <img src="assets/img/logo.png" alt="HackPrints logo">
+                        <span>HackPrints3D</span>
+                    </a>
+                    <p>Impresion 3D con enfoque visual, tecnico y comercial.</p>
+                </div>
+                <div>
+                    <h3>Secciones</h3>
+                    <a href="services.html">Servicios</a>
+                    <a href="projects.html">Proyectos</a>
+                    <a href="quote.html">Cotiza llaveros</a>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <a href="contact.html">Formulario</a>
+                    <a href="mailto:hola@hackprints.mx">hola@hackprints.mx</a>
+                    <a href="tel:+528112345678">+52 81 1234 5678</a>
+                </div>
+            </div>
+        </footer>
+
+        <a
+            href="https://wa.me/528112345678?text=Hola%20HackPrints3D,%20quiero%20informacion%20sobre%20sus%20servicios."
+            class="whatsapp-widget"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Escribenos por WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Tools | HackPrints</title>
+    <meta name="description" content="Herramientas internas de produccion para HackPrints.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/quote.css">
+</head>
+<body data-internal-page="true">
+    <div class="site-shell">
+        <main class="page-main">
+            <section class="page-hero">
+                <div class="container">
+                    <span class="eyebrow reveal">Uso interno</span>
+                    <h1 class="reveal">Herramientas de produccion para HackPrints.</h1>
+                    <p class="reveal">Esta pagina no esta enlazada desde la navegacion publica. Usala para revisar costos y filamento en tu flujo de trabajo.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container calculators-grid">
+                    <article class="calculator-card reveal">
+                        <div class="card-heading">
+                            <span class="eyebrow">Costo estimado</span>
+                            <h2>Presupuesto interno</h2>
+                        </div>
+                        <div class="field-group">
+                            <label for="peso">Peso del material (g)</label>
+                            <input type="number" id="peso" value="120" min="1">
+                        </div>
+                        <div class="field-group">
+                            <label for="tiempo">Tiempo de impresion (h)</label>
+                            <input type="number" id="tiempo" value="5.5" min="0.1" step="0.1">
+                        </div>
+                        <div class="field-group">
+                            <label for="material">Material</label>
+                            <select id="material">
+                                <option value="320" data-density="1.24">PLA estandar</option>
+                                <option value="420" data-density="1.27">PETG</option>
+                                <option value="590" data-density="1.21">ABS / ASA</option>
+                                <option value="680" data-density="1.20">TPU</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label for="diametro">Diametro del filamento</label>
+                            <select id="diametro">
+                                <option value="1.75">1.75 mm</option>
+                                <option value="2.85">2.85 mm</option>
+                            </select>
+                        </div>
+                        <div class="toggle-line">
+                            <input type="checkbox" id="incluirManoObra" checked>
+                            <label for="incluirManoObra">Incluir mano de obra y postproceso</label>
+                        </div>
+                        <button type="button" class="btn btn-primary full-button" id="calculate-cost">Calcular costo</button>
+                        <div class="calc-results">
+                            <p class="result-label">Costo total estimado</p>
+                            <strong id="costoTotal">$0 MXN</strong>
+                            <div class="breakdown-list">
+                                <div><span>Material</span><strong id="breakdown-material">$0</strong></div>
+                                <div><span>Energia</span><strong id="breakdown-energy">$0</strong></div>
+                                <div><span>Mano de obra</span><strong id="breakdown-labor">$0</strong></div>
+                                <div><span>Margen aplicado</span><strong id="breakdown-margin">1.60x</strong></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="calculator-card reveal">
+                        <div class="card-heading">
+                            <span class="eyebrow">Filamento</span>
+                            <h2>Longitud necesaria</h2>
+                        </div>
+                        <div class="field-group">
+                            <label for="filament-weight">Peso de la pieza (g)</label>
+                            <input type="number" id="filament-weight" value="120" min="1">
+                        </div>
+                        <div class="field-group">
+                            <label for="filament-density">Densidad del material (g/cm3)</label>
+                            <input type="number" id="filament-density" value="1.24" min="0.5" step="0.01">
+                        </div>
+                        <div class="field-group">
+                            <label for="filament-diameter">Diametro del filamento (mm)</label>
+                            <select id="filament-diameter">
+                                <option value="1.75">1.75 mm</option>
+                                <option value="2.85">2.85 mm</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label for="spool-weight">Filamento restante en tu spool (g)</label>
+                            <input type="number" id="spool-weight" value="350" min="0">
+                        </div>
+                        <button type="button" class="btn btn-secondary full-button" id="calculate-filament">Calcular filamento</button>
+                        <div class="calc-results">
+                            <p class="result-label">Longitud aproximada</p>
+                            <strong id="filament-length">0 m</strong>
+                            <p id="filament-spool-status">Ingresa valores para saber si tu spool alcanza.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/studio-tools.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

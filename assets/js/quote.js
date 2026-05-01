@@ -1,68 +1,70 @@
-// assets/js/quote.js
+document.addEventListener("DOMContentLoaded", () => {
+    const quantityField = document.getElementById("keychain-quantity");
+    const sizeField = document.getElementById("keychain-size");
+    const styleField = document.getElementById("keychain-style");
+    const totalField = document.getElementById("keychain-total");
+    const unitField = document.getElementById("keychain-unit");
+    const discountField = document.getElementById("keychain-discount");
+    const turnaroundField = document.getElementById("keychain-turnaround");
+    const marketSummaryField = document.getElementById("keychain-market-summary");
 
-function calcularCosto() {
-    // 1. Obtener valores del formulario
-    const pesoGramos = parseFloat(document.getElementById('peso').value);
-    const tiempoHoras = parseFloat(document.getElementById('tiempo').value);
-    const costoPorKg = parseFloat(document.getElementById('material').value);
-    const incluirManoObra = document.getElementById('incluirManoObra').checked;
+    const currency = new Intl.NumberFormat("es-MX", {
+        style: "currency",
+        currency: "MXN",
+        maximumFractionDigits: 2
+    });
 
-    // Validar entradas básicas
-    if (isNaN(pesoGramos) || isNaN(tiempoHoras) || pesoGramos <= 0 || tiempoHoras <= 0) {
-        document.getElementById('costoTotal').textContent = 'Datos inválidos.';
-        return;
-    }
+    const basePrices = {
+        5: 62,
+        8: 82,
+        10: 99
+    };
 
-    // --- Parámetros de Costo Fijos (AJUSTADOS para Centauri Carbon y NL) ---
-    
-    // A. Costo de la Electricidad (Nuevo León, CFE Tarifa de Referencia)
-    const costoElectricidadPorKWH = 4.50; // MXN por kWh
-    
-    // B. Consumo Promedio de la Impresora 3D (Centauri Carbon - Estimado en impresión)
-    const consumoImpresoraKW = 0.20; // 200 Watts / 1000 = 0.20 kW
+    const getDiscountMultiplier = (quantity) => {
+        if (quantity >= 50) return 0.32;
+        if (quantity >= 30) return 0.38;
+        if (quantity >= 10) return 0.48;
+        if (quantity >= 5) return 0.72;
+        return 1;
+    };
 
-    // C. Costo por Mantenimiento, Depreciación y Mano de Obra por hora
-    const costoManoDeObraPorHora = 30.00; // MXN por hora
+    const getTurnaround = (quantity) => {
+        if (quantity >= 50) return "4 a 7 dias";
+        if (quantity >= 20) return "3 a 5 dias";
+        return "2 a 4 dias";
+    };
 
-    // D. Multiplicador de Ganancia y Riesgo (Margen de Beneficio)
-    const multiplicadorGanancia = 1.6;
+    const calculateKeychains = () => {
+        if (!quantityField || !sizeField || !styleField || !totalField) return;
 
-    // --- CÁLCULOS ---
-    
-    // 1. Costo del Material (MXN)
-    const pesoKg = pesoGramos / 1000;
-    const costoMaterial = pesoKg * costoPorKg;
+        const quantity = Number(quantityField.value);
+        const size = Number(sizeField.value);
+        const styleMultiplier = Number(styleField.value);
 
-    // 2. Costo de Energía (MXN)
-    const costoEnergia = tiempoHoras * consumoImpresoraKW * costoElectricidadPorKWH;
+        if (quantity <= 0 || !basePrices[size] || styleMultiplier <= 0) {
+            totalField.textContent = "Datos invalidos";
+            return;
+        }
 
-    // 3. Costo Fijo (Mano de Obra y Desgaste) (MXN)
-    let costoManoDeObraTotal = 0;
-    
-    // Lógica Condicional: Aplicar costo de Mano de Obra si está marcada
-    if (incluirManoObra) {
-        costoManoDeObraTotal = tiempoHoras * costoManoDeObraPorHora;
-    }
-    
-    // 4. Costo Base Total (Material + Energía + Mano de Obra)
-    const costoBase = costoMaterial + costoEnergia + costoManoDeObraTotal;
+        const discountMultiplier = getDiscountMultiplier(quantity);
+        const unitPrice = basePrices[size] * styleMultiplier * discountMultiplier;
+        const totalPrice = unitPrice * quantity;
+        const discountPercent = Math.round((1 - discountMultiplier) * 100);
 
-    // 5. Costo Final (Aplicando Ganancia/Margen)
-    const costoFinal = costoBase * multiplicadorGanancia;
-    
-    // --- MOSTRAR RESULTADO ---
-    
-    const costoRedondeado = costoFinal.toFixed(2); // Redondear a 2 decimales
-    document.getElementById('costoTotal').textContent = `$${costoRedondeado} MXN`;
+        totalField.textContent = currency.format(totalPrice);
+        unitField.textContent = currency.format(unitPrice);
+        discountField.textContent = `${discountPercent}%`;
+        turnaroundField.textContent = getTurnaround(quantity);
 
-    // *Desglose en Consola* (útil para depuración)
-    console.log(`--- Desglose de Costos (MXN) ---`);
-    console.log(`Costo Material: $${costoMaterial.toFixed(2)}`);
-    console.log(`Costo Energía (NL/Centauri Carbon): $${costoEnergia.toFixed(2)}`);
-    console.log(`Costo Fijo/M.O.B: $${costoManoDeObraTotal.toFixed(2)} (${incluirManoObra ? 'INCLUIDA' : 'NO INCLUIDA'})`);
-    console.log(`Costo Base (sin margen): $${costoBase.toFixed(2)}`);
-    console.log(`Costo FINAL (con margen): $${costoRedondeado}`);
-}
+        const sizeLabel = `${size} cm`;
+        marketSummaryField.textContent = `Para ${quantity} llaveros de ${sizeLabel}, la referencia cae cerca de ${currency.format(totalPrice)} antes de ajustes por color especial, doble cara, empaque o urgencia.`;
+    };
 
-// Inicializar el cálculo al cargar la página
-document.addEventListener('DOMContentLoaded', calcularCosto);
+    document.getElementById("calculate-keychain")?.addEventListener("click", calculateKeychains);
+    [quantityField, sizeField, styleField].forEach((field) => {
+        field?.addEventListener("input", calculateKeychains);
+        field?.addEventListener("change", calculateKeychains);
+    });
+
+    calculateKeychains();
+});

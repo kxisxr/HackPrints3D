@@ -3,63 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - HackPrints</title>
+    <title>Contacto | HackPrints</title>
+    <meta name="description" content="Contacto para proyectos de impresion 3D, prototipado, lotes cortos y diseno de piezas personalizadas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container navbar">
-            <a href="index.html" class="logo">
-                <img src="assets/img/logo.png" alt="HackPrints Logo">
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="services.html">Servicios</a></li>
-                    <li><a href="projects.html">Proyectos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="quote.html" class="btn">Cotizador 3D</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="container fade-in">
-        <h1>Contáctanos</h1>
-        <p>¿Tienes un proyecto en mente o una pregunta? Estamos aquí para ayudarte.</p>
-
-        <div style="max-width: 600px; margin: 40px auto; background-color: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left;">
-            <form action="#" method="POST"> <div class="input-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Enviar Mensaje</button>
-            </form>
-            <p style="text-align: center; margin-top: 30px;">También puedes encontrarnos en:</p>
-            <div style="display: flex; justify-content: center; gap: 20px;">
-                <a href="#" style="font-size: 2em; color: var(--primary-blue);"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" style="font-size: 2em; color: var(--primary-blue);"><i class="fab fa-instagram"></i></a>
-                <a href="#" style="font-size: 2em; color: var(--primary-blue);"><i class="fab fa-linkedin"></i></a>
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="container nav-wrap">
+                <a href="index.html" class="brand" aria-label="HackPrints inicio">
+                    <img src="assets/img/logo.png" alt="HackPrints logo">
+                    <span>HackPrints3D</span>
+                </a>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="site-nav" aria-label="Principal">
+                    <a href="index.html">Inicio</a>
+                    <a href="services.html">Servicios</a>
+                    <a href="projects.html">Proyectos</a>
+                    <a href="contact.html" class="is-active">Contacto</a>
+                    <a href="quote.html" class="btn btn-primary">Cotiza llaveros</a>
+                </nav>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 HackPrints. Todos los derechos reservados.</p>
-            <p>Diseñado con <a href="#">pasión 3D</a></p>
-        </div>
-    </footer>
+        <main class="page-main">
+            <section class="page-hero">
+                <div class="container">
+                    <span class="eyebrow reveal">Contacto</span>
+                    <h1 class="reveal">Una pagina moderna tambien necesita una forma clara de convertir visitas en conversaciones.</h1>
+                    <p class="reveal">Reorganice esta seccion para que funcione mejor como embudo comercial, con formulario, datos rapidos y beneficios visibles.</p>
+                </div>
+            </section>
 
+            <section class="section">
+                <div class="container contact-layout">
+                    <div class="contact-panel glass-card reveal">
+                        <span class="eyebrow">Hablemos de tu pieza</span>
+                        <h2>Cuanto mas contexto recibimos, mejor podemos cotizar y fabricar.</h2>
+                        <div class="contact-points">
+                            <div><i class="fa-solid fa-file-arrow-up"></i><span>Adjunta STL, STEP, renders o referencias visuales</span></div>
+                            <div><i class="fa-solid fa-layer-group"></i><span>Indica cantidad, material ideal y fecha objetivo</span></div>
+                            <div><i class="fa-solid fa-truck-fast"></i><span>Entrega local o envio segun necesidad</span></div>
+                        </div>
+                        <div class="contact-links">
+                            <a href="mailto:hola@hackprints.mx">hola@hackprints.mx</a>
+                            <a href="tel:+528112345678">+52 81 1234 5678</a>
+                            <a href="quote.html">Cotizar llaveros</a>
+                        </div>
+                    </div>
+
+                    <form
+                        class="contact-form reveal"
+                        action="https://formsubmit.co/hola@hackprints.mx"
+                        method="POST"
+                    >
+                        <input type="hidden" name="_subject" value="Nuevo contacto desde HackPrints3D">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="contact-success.html">
+                        <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
+                        <div class="field-group">
+                            <label for="name">Nombre</label>
+                            <input id="name" name="name" type="text" placeholder="Tu nombre o marca" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="email">Correo</label>
+                            <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="service">Tipo de proyecto</label>
+                            <select id="service" name="service" required>
+                                <option>Prototipo</option>
+                                <option>Pieza funcional</option>
+                                <option>Branding / decoracion</option>
+                                <option>Modelado 3D</option>
+                                <option>Lote corto</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label for="message">Detalles</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Cuantas piezas necesitas, para que se usaran, material ideal, medidas y fecha estimada." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar consulta</button>
+                        <p class="form-note">El formulario queda conectado para enviar correos a <strong>hola@hackprints.mx</strong>. La primera vez deberas confirmar la activacion del servicio desde ese correo.</p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div>
+                    <a href="index.html" class="brand footer-brand">
+                        <img src="assets/img/logo.png" alt="HackPrints logo">
+                        <span>HackPrints3D</span>
+                    </a>
+                    <p>Impresion 3D con enfoque visual, tecnico y comercial.</p>
+                </div>
+                <div>
+                    <h3>Secciones</h3>
+                    <a href="services.html">Servicios</a>
+                    <a href="projects.html">Proyectos</a>
+                    <a href="quote.html">Cotiza llaveros</a>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <a href="contact.html">Formulario</a>
+                    <a href="mailto:hola@hackprints.mx">hola@hackprints.mx</a>
+                    <a href="tel:+528112345678">+52 81 1234 5678</a>
+                </div>
+            </div>
+        </footer>
+
+        <a
+            href="https://wa.me/528112345678?text=Hola%20HackPrints3D,%20quiero%20hablar%20sobre%20mi%20proyecto."
+            class="whatsapp-widget"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Escribenos por WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
